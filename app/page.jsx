@@ -215,29 +215,9 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // TEMPORARILY RESTORED TO FAKE TIMER FOR TESTING WITHOUT PAYMENT
-    setTimeout(async () => {
-      // Trigger the email in the background
-      try {
-        await fetch('/api/payment-success', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            payment_id: "TEST_PAY_12345",
-            order_id: "TEST_ORDER_12345",
-            user: formData,
-            ticketId: ticketId
-          })
-        });
-      } catch(err) {
-        console.error(err);
-      }
 
-      setIsSubmitting(false);
-      setStep(3);
-    }, 2000);
 
-    /* RAZORPAY CODE (Commented out for testing)
+    // RAZORPAY CODE
     try {
       // 1. Load Razorpay script if not loaded
       if (!window.Razorpay) {
@@ -313,7 +293,7 @@ export default function Home() {
       alert('Error initiating payment. Please try again.');
       setIsSubmitting(false);
     }
-    */
+
   };
 
   const handleDownloadTicket = async () => {
