@@ -2539,3 +2539,5 @@ label { font-size: 14px; }
   background: #f8fafc;
   border-color: #cbd5e1;
 }
+/* force reload */
+:root { border: 0px solid red; }
