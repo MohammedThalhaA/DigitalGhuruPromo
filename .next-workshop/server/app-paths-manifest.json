@@ -1,4 +1,10 @@
 {
+  "/api/razorpay/create-order/route": "app/api/razorpay/create-order/route.js",
+  "/api/payment-success/route": "app/api/payment-success/route.js",
+  "/api/register/route": "app/api/register/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js"
+  "/api/ticket-download/route": "app/api/ticket-download/route.js",
+  "/api/track/route": "app/api/track/route.js",
+  "/page": "app/page.js",
+  "/admin/page": "app/admin/page.js"
 }

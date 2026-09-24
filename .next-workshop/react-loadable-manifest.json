@@ -1,4 +1,10 @@
 {
+  "app\\page.jsx -> html2canvas": {
+    "id": 2699,
+    "files": [
+      "static/chunks/ad2866b8.ba41a4c2c4874824.js"
+    ]
+  },
   "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
     "id": 472,
     "files": [
