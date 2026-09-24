@@ -2,6 +2,7 @@
 
 import React from 'react';
 import * as XLSX from 'xlsx';
+import { logoutAction } from './actions';
 
 export default function AdminDashboardClient({ initialData, totalViews = 0 }) {
   const totalRegistrations = initialData.length;
@@ -52,12 +53,23 @@ export default function AdminDashboardClient({ initialData, totalViews = 0 }) {
       <div style={{ background: 'white', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)', overflow: 'hidden' }}>
         <div style={{ padding: '20px', borderBottom: '1px solid #e2e8f0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h2 style={{ margin: 0, fontSize: '18px', color: '#0f172a' }}>Recent Registrations</h2>
-          <button 
-            onClick={handleExport}
-            style={{ background: '#2563eb', color: 'white', border: 'none', padding: '10px 16px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}
-          >
-            Download Excel CSV
-          </button>
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <button 
+              onClick={handleExport}
+              style={{ background: '#2563eb', color: 'white', border: 'none', padding: '10px 16px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}
+            >
+              Download Excel CSV
+            </button>
+            <button 
+              onClick={async () => {
+                await logoutAction();
+                window.location.reload();
+              }}
+              style={{ background: '#ef4444', color: 'white', border: 'none', padding: '10px 16px', borderRadius: '6px', cursor: 'pointer', fontWeight: 'bold' }}
+            >
+              Logout
+            </button>
+          </div>
         </div>
         
         <div style={{ overflowX: 'auto' }}>

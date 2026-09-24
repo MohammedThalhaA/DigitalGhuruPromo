@@ -17,3 +17,8 @@ export async function loginAction(password) {
   
   return { success: false, error: 'Incorrect password' };
 }
+
+export async function logoutAction() {
+  const cookieStore = await cookies();
+  cookieStore.delete('admin_auth');
+}
