@@ -2559,6 +2559,9 @@ label { font-size: 14px; }
   .photo-orbit, .photo-stamp { display: none !important; }
   
   .promise, .audience, .problem, .method, .trainer, .date, .bento-grid, .why-choose-container, .faq-target-grid { grid-template-columns: 1fr !important; width: 100% !important; max-width: 100vw !important; box-sizing: border-box !important; }
+  .problem-side p { font-size: 17px !important; }
+  .audience .chips { margin-left: 0 !important; }
+  .chips p { font-size: 16px !important; }
   
   /* CRITICAL: Force Register to Stack */
   .register, .register-inner { display: flex !important; flex-direction: column !important; width: 100% !important; gap: 40px !important; }
@@ -2589,7 +2592,8 @@ label { font-size: 14px; }
   h1 { font-size: 2.6rem !important; word-wrap: break-word !important; }
   .hero-content { padding-top: 40px !important; width: 100% !important; box-sizing: border-box !important; }
   
-  .reveal { transform: none !important; }
+  .reveal { transform: translateY(30px) !important; }
+  .reveal.visible { transform: none !important; }
   .method-cards article, .bento-card, .date-card, .outcome { transform: none !important; width: 100% !important; max-width: 100vw !important; margin: 0 !important; box-sizing: border-box !important; }
   
   .countdown-timer { gap: 4px !important; flex-wrap: wrap !important; padding: 15px 5px !important; }
